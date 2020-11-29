@@ -27,7 +27,7 @@ public class Calculator {
     public int minElement(int[] list){
 
 
-        int min = 0;
+        int min = list[0];
 
         for (int i = 0; i < list.length; i++) {
             if (list[i] < min)
@@ -41,10 +41,11 @@ public class Calculator {
     }
     public int maxElement(int[]list)
     {
-        int max = 0;
+        int max = list[0];
 
         for (int i = 0; i < list.length; i++) {
-            if (list[i] < max)
+
+            if (list[i] > max)
             {
                 max = list[i];
             }

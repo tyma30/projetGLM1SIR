@@ -60,8 +60,15 @@ public class CalculatorTest {
     @Test
     public void testMinElement()
     {
-        int tab[]={3,4,8,1,9,0};
+        int tab[]={3,4,8,1,9};
         int m=calculator.minElement(tab);
-        Assert.assertEquals(0,m);
+        Assert.assertEquals(1,m);
+    }
+    @Test
+    public void testMaxElement()
+    {
+        int tab[]={3,4,8,1,9,0};
+        int m=calculator.maxElement(tab);
+        Assert.assertEquals(9,m);
     }
 }
