@@ -51,11 +51,17 @@ public class CalculatorTest {
         if (min != 10) Assert.fail();
     }
 
-    /*AJOUTER LA METHODE DE TEST SUR Max()
-    en utilisant Assert.assertEquals()*/
+
     @Test
     public void testMax(){
         int max = calculator.max(2000, -2000);
         Assert.assertEquals(2000,max);
+    }
+    @Test
+    public void testMinElement()
+    {
+        int tab[]={3,4,8,1,9,0};
+        int m=calculator.minElement(tab);
+        Assert.assertEquals(0,m);
     }
 }
