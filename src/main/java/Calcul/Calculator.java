@@ -1,5 +1,7 @@
 package Calcul;
 
+import java.util.Arrays;
+
 public class Calculator {
     public int sum(int a, int b) {
         return a + b;
@@ -24,33 +26,17 @@ public class Calculator {
     public int max(int a, int b){
         return Math.max(a,b);
     }
-    public int minElement(int[] list){
-
-
-        int min = list[0];
-
-        for (int i = 0; i < list.length; i++) {
-            if (list[i] < min)
-            {
-                min = list[i];
-            }
-        }
-
-        return min;
+    public int minElement(int[] list)
+    {
+        if(list.length>=0)
+            Arrays.sort(list);
+        return  list[0];
 
     }
     public int maxElement(int[]list)
     {
-        int max = list[0];
-
-        for (int i = 0; i < list.length; i++) {
-
-            if (list[i] > max)
-            {
-                max = list[i];
-            }
-        }
-
-        return max;
+        if(list.length>0)
+            Arrays.sort(list);
+        return  list[list.length-1];
     }
 }
